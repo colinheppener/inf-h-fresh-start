@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Salami",
+    "price": 3,
+    "imageURL": "../img/salami.png" ,
+    "calorien": 9001
+  },
+  {
+    "name": "pepperoni",
+    "price": 10,
+    "imageURL": "../img/Pepperoni.png" ,
+    "calorien": 91
+  },
+  {
+    "name": "hawaii",
+    "price": 1,
+    "imageURL": "../img/Hawaii.png" ,
+    "calorien": 462
+  }
+]

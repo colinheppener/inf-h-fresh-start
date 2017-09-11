@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
+            <p>
+                Sort by:
+                <select ng-model="$ctrl.orderProp">
+                    <option value="price">Prijs</option>
+                    <option value="calorien">Calorien</option>
+                </select>
+            </p>
+
+        </div>
+        <div class="col-md-10">
+            <!--Body content-->
+
+            <ul class="pizzas">
+                <li ng-repeat="pizza in $ctrl.pizzas | orderBy:$ctrl.orderProp" class="thumbnail">
+                    <p><h3>{{pizza.name}}</h3>          </p><div class="picture"> <img src={{pizza.imageURL}} height="200" width="300"></div>
+                    <p>calorien: {{pizza.calorien}}</p>
+                    <p>prijs: {{pizza.price}}</p>
+                    <td ng-init="itemTotal = product.price; controller.Total = controller.Total + itemTotal">{{itemTotal}} €</td>
+
+                </li>
+            </ul>
+            <td>{{ controller.Total }}</td> // Here is the total value of my cart
+        </div>
+    </div>
+</div>
+
